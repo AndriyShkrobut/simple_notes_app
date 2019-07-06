@@ -2,26 +2,21 @@
   {
     "title": "Front-End",
     "text": "Learn JS",
-    "done": false
+    "done": true
   },
   {
     "title": "Back-End",
     "text": "Learn NodeJS",
-    "done": true
-  },
-  {
-    "title": "Education",
-    "text": "End 2nd year",
-    "done": true
-  },
-  {
-    "title": "Sport",
-    "text": "Lose weight",
     "done": false
   },
   {
-    "title": "Relationship",
-    "text": "Find girlfriend",
+    "title": "Education",
+    "text": "End 3nd year",
+    "done": false
+  },
+  {
+    "title": "Sport",
+    "text": "Put on muscle weight",
     "done": false
   }
 ]
