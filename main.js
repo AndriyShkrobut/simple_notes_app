@@ -9,19 +9,13 @@ const filters = {
   done: null,
 };
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   if (!localStorage.getItem('notes')) {
-    getNotes('./data/notes.json', (res, err) => {
-      if (err) {
-        return console.log(`Error: ${err}`);
-      }
-      localStorage.setItem('notes', res);
-    });
+    let data = await getNotes('./data/notes.json');
+    localStorage.setItem('notes', data);
   }
-  setTimeout(() => {
-    notes = JSON.parse(localStorage.getItem('notes'));
-    renderNotes(notes, filters);
-  }, 200);
+  notes = JSON.parse(localStorage.getItem('notes'));
+  renderNotes(notes, filters);
 });
 
 document.querySelector('#filterNotes').addEventListener('input', e => {
