@@ -8,26 +8,29 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <label class="is" for="filterNotes">
-      Filter Notes
-    </label>
-    <input type="text" placeholder="Enter note's title" id="filterNotes" />
+    <form id="searchNotes">
+      <h1>Search Notes</h2>
+      <input type="text" placeholder="Enter note's title" id="filterNotes" />
+    </form>
+
     <form id="filterByDone">
-      <label class="lbl">
-        <input type="radio" name="filterByDone" value="done" />
-        Finished </label
-      ><br />
-      <label>
-        <input type="radio" name="filterByDone" value="undone" />
-        Unfinished </label
-      ><br />
+      <h1>Show Notes</h2>
       <label>
         <input type="radio" name="filterByDone" value="all" checked />
         All
       </label>
+      <label class="lbl">
+        <input type="radio" name="filterByDone" value="done" />
+        Finished
+      </label>
+      <label>
+        <input type="radio" name="filterByDone" value="undone" />
+        Unfinished
+      </label>
     </form>
 
     <form id="newNote" method="get">
+      <h1>Add New Note</h1>
       <label for="newNoteTitle"
         >Title
         <input type="text" id="newNoteTitle" placeholder="Note's Title" />
@@ -38,6 +41,7 @@
       </label>
       <input type="submit" id="newNoteSubmit" value="Add Note" disabled />
     </form>
+
     <ul class="notes"></ul>
     <script type="module" src="main.js"></script>
   </body>

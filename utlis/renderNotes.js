@@ -17,15 +17,12 @@ const renderNotes = (notes, filters) => {
 
   notesToRender.forEach(note => {
     const title = document.createElement('h2');
-    title.setAttribute('class', 'note_item_title');
     title.textContent = note.title;
 
-    const text = document.createElement('p');
-    text.setAttribute('class', 'note_item_text');
+    const text = document.createElement('h3');
     text.textContent = note.text;
 
     const listItem = document.createElement('li');
-    listItem.setAttribute('class', 'note_item');
     listItem.append(title, text);
 
     notesContainer.appendChild(listItem);
