@@ -21,7 +21,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     notes = JSON.parse(localStorage.getItem('notes'));
     renderNotes(notes, filters);
-  }, 100);
+  }, 200);
 });
 
 document.querySelector('#filterNotes').addEventListener('input', e => {
